@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://xiaotang1122.github.io</id>
     <title>Letter</title>
-    <updated>2020-05-09T11:31:32.442Z</updated>
+    <updated>2020-05-09T11:49:47.245Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://xiaotang1122.github.io"/>
     <link rel="self" href="https://xiaotang1122.github.io/atom.xml"/>
@@ -10,6 +10,64 @@
     <logo>https://xiaotang1122.github.io/images/avatar.png</logo>
     <icon>https://xiaotang1122.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Letter</rights>
+    <entry>
+        <title type="html"><![CDATA[🍈数组的方法]]></title>
+        <id>https://xiaotang1122.github.io/shu-zu-de-fang-fa/</id>
+        <link href="https://xiaotang1122.github.io/shu-zu-de-fang-fa/">
+        </link>
+        <updated>2020-05-09T11:40:57.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="language-JavaScript"> // //1.拆分
+            let str ='tangshizhong,hahaha'
+            let cf = str.split(',')
+            console.log(cf);
+            console.log(cf[0],cf[1]);
+            console.log(cf.join('🍋'));    
+
+
+//2.数组的连接
+            let arr = ['a','b','c','d']
+
+            let brr = [1,2,3,4]
+
+            let crr = [6,7,8,9]
+
+             arr = arr.concat(brr,crr)
+            arr = [...arr,...brr,...crr]
+            console.table(arr);
+
+
+ //3,数组的复制
+
+            let arr = [1,2,3,4,5]
+
+
+            console.log(arr.copyWithin(3,0,3));
+            
+
+ // 4.数组的查找
+         //4.1:indexOf: 从左边索引开始
+                let arr = [1,2,3,4,5,6,2];
+                console.log(arr.indexOf(3));  //返回索引2
+                
+// 4.2:lastindexOf：从末尾索引开始
+
+                console.log(arr.lastIndexOf(2));    //返回6
+                  
+   // 4.3: includes()查找
+
+                console.log(arr.includes(1))
+                if(arr.includes(1)){
+
+                    
+                    console.log('找到了');
+                    
+                }
+                   
+                
+                console.log(Math.abs(-6.666));
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[🍋使用JavaScript实现时间显示]]></title>
         <id>https://xiaotang1122.github.io/shi-yong-javascript-shi-xian-shi-jian-xian-shi/</id>

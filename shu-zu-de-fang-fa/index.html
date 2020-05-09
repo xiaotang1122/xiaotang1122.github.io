@@ -1,9 +1,8 @@
-<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>我的阅读 | Letter</title>
+<title>🍈数组的方法 | Letter</title>
 <meta name="description" content="Pursuit stems from love" />
 <link rel="shortcut icon" href="https://xiaotang1122.github.io/favicon.ico">
 <link rel="stylesheet" href="https://xiaotang1122.github.io/styles/main.css">
@@ -16,13 +15,16 @@
 <script src="https://xiaotang1122.github.io/media/js/jquery.magnific-popup.min.js"></script>
 <script src="https://xiaotang1122.github.io/media/js/functions.js"></script>
     <meta name="referrer" content="never">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.css">
-    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.js'></script>
+    <meta name="description" content=" // //1.拆分
+            let str ='tangshizhong,hahaha'
+            let cf = str.split(',')
+            console.log(cf);
+ ..." />
+    <meta name="keywords" content="JavaScript" />
+    <script src="https://xiaotang1122.github.io/media/js/waterfall.min.js"></script>
+    <script src="https://xiaotang1122.github.io/media/js/prism.min.js"></script>
   </head>
   <body>
-    <!-- start: #wrapper -->
-    <div class="wrapper">
-      
             <header id="header" class="grid-container">
         <!-- start: .menu-wrapper -->
         <div class="menu-mobile"> 
@@ -77,14 +79,126 @@
         </div>
       </div>
 
-      <main id="friends" class="main fullcover no-sidebar content">
-        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('\media\images\custom-featureImage.png');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2020-05-09"><i class="fa fa-calendar"></i><span class="lately">9 分钟前</span></time>
+              
+              <a href="https://xiaotang1122.github.io/shu-zu-de-fang-fa/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/shu-zu-de-fang-fa/"> </span>
+              </a>
+              <span id="/shu-zu-de-fang-fa/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+                      <a href="https://xiaotang1122.github.io/uXphLJGU8/" class="ctag ctag-0 ctag-uXphLJGU8" aria-label="">JavaScript</a>
+                    
+              </div>
+              <h1 class="title ularge white bold">🍈数组的方法</h1>
+            </div>
+          </div>
+        </div>  
+
         <div class="epcl-page-wrapper">
-          <div class="section-content" style="margin-top:3em;"></div>
-        </div>
-        </div>
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <pre><code class="language-JavaScript"> // //1.拆分
+            let str ='tangshizhong,hahaha'
+            let cf = str.split(',')
+            console.log(cf);
+            console.log(cf[0],cf[1]);
+            console.log(cf.join('🍋'));    
+
+
+//2.数组的连接
+            let arr = ['a','b','c','d']
+
+            let brr = [1,2,3,4]
+
+            let crr = [6,7,8,9]
+
+             arr = arr.concat(brr,crr)
+            arr = [...arr,...brr,...crr]
+            console.table(arr);
+
+
+ //3,数组的复制
+
+            let arr = [1,2,3,4,5]
+
+
+            console.log(arr.copyWithin(3,0,3));
+            
+
+ // 4.数组的查找
+         //4.1:indexOf: 从左边索引开始
+                let arr = [1,2,3,4,5,6,2];
+                console.log(arr.indexOf(3));  //返回索引2
+                
+// 4.2:lastindexOf：从末尾索引开始
+
+                console.log(arr.lastIndexOf(2));    //返回6
+                  
+   // 4.3: includes()查找
+
+                console.log(arr.includes(1))
+                if(arr.includes(1)){
+
+                    
+                    console.log('找到了');
+                    
+                }
+                   
+                
+                console.log(Math.abs(-6.666));
+</code></pre>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://xiaotang1122.github.io/media/images/uXphLJGU8.jpg');"></div>
+                 <a href="https://xiaotang1122.github.io/shi-yong-javascript-shi-xian-shi-jian-xian-shi/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2020-05-09">2020-05-09</time>
+                  <h4 class="title white no-margin">🍋使用JavaScript实现时间显示</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://xiaotang1122.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+              </div>
+              <div class="clear"></div>
+            
+
+            </div>
+          </div>
       </main>
-        <footer id="footer" class="grid-container">
+
+          <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
               <div class="grid-33 tablet-grid-50 mobile-grid-100">
@@ -186,15 +300,9 @@
 
         
 
-    <script>
-    new Bmdb({
-      type: 'books',
-      selector: '.section-content',
-      secret: '',
-      noMoreText: '没有更多数据了',
-      limit: 30
-    })
-    </script>
+      
+    <script src="https://xiaotang1122.github.io/media/js/functions-post.js"></script>
+
     </div>
     <!-- end: #wrapper -->
   </body>
