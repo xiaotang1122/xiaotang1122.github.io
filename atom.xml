@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://xiaotang1122.github.io</id>
     <title>Letter</title>
-    <updated>2020-05-09T11:54:39.287Z</updated>
+    <updated>2020-05-11T08:00:53.570Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://xiaotang1122.github.io"/>
     <link rel="self" href="https://xiaotang1122.github.io/atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://xiaotang1122.github.io/images/avatar.png</logo>
     <icon>https://xiaotang1122.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Letter</rights>
+    <entry>
+        <title type="html"><![CDATA[递归调用]]></title>
+        <id>https://xiaotang1122.github.io/di-gui-diao-yong/</id>
+        <link href="https://xiaotang1122.github.io/di-gui-diao-yong/">
+        </link>
+        <updated>2020-05-11T07:51:22.000Z</updated>
+        <content type="html"><![CDATA[<p>递归指函数内部调用自身的方式。<br>
+主要用于数量不确定的循环操作<br>
+要有退出时机否则会陷入死循环<br>
+下面通过阶乘来体验递归调用</p>
+<pre><code class="language-JavaScript">function factorial(num = 3) {
+	return num == 1 ? num : num * factorial(--num);
+}
+console.log(factorial(5)); //120
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[🍈数组的方法]]></title>
         <id>https://xiaotang1122.github.io/shu-zu-de-fang-fa/</id>
