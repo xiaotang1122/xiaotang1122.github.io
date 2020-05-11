@@ -70,7 +70,7 @@ function factorial(num = 3) {
       <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
         <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
           <div class="search-wrapper section">
-            <form id="gridea-search-form" data-update="1589183778134" action="/search/index.html" class="search-form" _lpchecked="1">
+            <form id="gridea-search-form" data-update="1589184313394" action="/search/index.html" class="search-form" _lpchecked="1">
               <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
               <button type="submit" class="submit" aria-label="Submit">
                 <i class="fa fa-search-line"></i>
@@ -85,7 +85,7 @@ function factorial(num = 3) {
         <div class="center content">
           <div class="featured-image cover" style="background-image: url('/media/images/gridea.jpg');">
             <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="2020-05-11"><i class="fa fa-calendar"></i><span class="lately">10 分钟前</span></time>
+              <time class="meta-info" style="float:left;" datetime="2020-05-11"><i class="fa fa-calendar"></i><span class="lately">15 分钟前</span></time>
               
               <a href="https://xiaotang1122.github.io/di-gui-diao-yong/#comments" class="comments meta-info" title="">
                 <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/di-gui-diao-yong/"> </span>
@@ -110,11 +110,31 @@ function factorial(num = 3) {
                   <p>递归指函数内部调用自身的方式。<br>
 主要用于数量不确定的循环操作<br>
 要有退出时机否则会陷入死循环<br>
-下面通过阶乘来体验递归调用</p>
+<strong>下面通过阶乘来体验递归调用</strong></p>
 <pre><code class="language-JavaScript">function factorial(num = 3) {
 	return num == 1 ? num : num * factorial(--num);
 }
 console.log(factorial(5)); //120
+</code></pre>
+<p><strong>累加计算方法</strong></p>
+<pre><code class="language-JavaScript">function sum(...num) {
+	return num.length == 0 ? 0 : num.pop() + sum(...num);
+}
+console.log(sum(1, 2, 3, 4, 5, 7, 9)); //31
+</code></pre>
+<p><strong>递归打印倒三角</strong></p>
+<pre><code class="language-JavaScript">******
+*****
+****
+***
+**
+*
+
+function star(row = 5) {
+  if (row == 0) return &quot;&quot;;
+  document.write(&quot;*&quot;.repeat(row) + &quot;&lt;br/&gt;&quot;);
+  star(--row);
+}
 </code></pre>
 
                 </div>
