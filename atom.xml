@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://xiaotang1122.github.io</id>
     <title>Letter</title>
-    <updated>2021-02-22T17:33:54.832Z</updated>
+    <updated>2021-02-22T18:14:24.078Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://xiaotang1122.github.io"/>
     <link rel="self" href="https://xiaotang1122.github.io/atom.xml"/>
@@ -11,161 +11,24 @@
     <icon>https://xiaotang1122.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Letter</rights>
     <entry>
-        <title type="html"><![CDATA[☺递归调用]]></title>
-        <id>https://xiaotang1122.github.io/post/di-gui-diao-yong/</id>
-        <link href="https://xiaotang1122.github.io/post/di-gui-diao-yong/">
+        <title type="html"><![CDATA[递归调用]]></title>
+        <id>https://xiaotang1122.github.io/di-gui-diao-yong/</id>
+        <link href="https://xiaotang1122.github.io/di-gui-diao-yong/">
         </link>
         <updated>2020-05-11T07:51:22.000Z</updated>
-        <content type="html"><![CDATA[<p>递归指函数内部调用自身的方式。<br>
-主要用于数量不确定的循环操作<br>
-要有退出时机否则会陷入死循环<br>
-<strong>下面通过阶乘来体验递归调用</strong></p>
-<pre><code class="language-JavaScript">function factorial(num = 3) {
-	return num == 1 ? num : num * factorial(--num);
-}
-console.log(factorial(5)); //120
-</code></pre>
-<p><strong>累加计算方法</strong></p>
-<pre><code class="language-JavaScript">function sum(...num) {
-	return num.length == 0 ? 0 : num.pop() + sum(...num);
-}
-console.log(sum(1, 2, 3, 4, 5, 7, 9)); //31
-</code></pre>
-<p><strong>递归打印倒三角</strong></p>
-<pre><code class="language-JavaScript">******
-*****
-****
-***
-**
-*
-
-function star(row = 5) {
-  if (row == 0) return &quot;&quot;;
-  document.write(&quot;*&quot;.repeat(row) + &quot;&lt;br/&gt;&quot;);
-  star(--row);
-}
-</code></pre>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[🍈数组的方法]]></title>
-        <id>https://xiaotang1122.github.io/post/shu-zu-de-fang-fa/</id>
-        <link href="https://xiaotang1122.github.io/post/shu-zu-de-fang-fa/">
+        <id>https://xiaotang1122.github.io/shu-zu-de-fang-fa/</id>
+        <link href="https://xiaotang1122.github.io/shu-zu-de-fang-fa/">
         </link>
         <updated>2020-05-09T11:40:57.000Z</updated>
-        <content type="html"><![CDATA[<pre><code class="language-JavaScript"> // //1.拆分
-            let str ='tangshizhong,hahaha'
-            let cf = str.split(',')
-            console.log(cf);
-            console.log(cf[0],cf[1]);
-            console.log(cf.join('🍋'));    
-
-
-//2.数组的连接
-            let arr = ['a','b','c','d']
-
-            let brr = [1,2,3,4]
-
-            let crr = [6,7,8,9]
-
-             arr = arr.concat(brr,crr)
-            arr = [...arr,...brr,...crr]
-            console.table(arr);
-
-
- //3,数组的复制
-
-            let arr = [1,2,3,4,5]
-
-
-            console.log(arr.copyWithin(3,0,3));
-            
-
- // 4.数组的查找
-         //4.1:indexOf: 从左边索引开始
-                let arr = [1,2,3,4,5,6,2];
-                console.log(arr.indexOf(3));  //返回索引2
-                
-// 4.2:lastindexOf：从末尾索引开始
-
-                console.log(arr.lastIndexOf(2));    //返回6
-                  
-   // 4.3: includes()查找
-
-                console.log(arr.includes(1))
-                if(arr.includes(1)){
-
-                    
-                    console.log('找到了');
-                    
-                }
-                   
-                
-                console.log(Math.abs(-6.666));
-</code></pre>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[🍋使用JavaScript实现时间显示]]></title>
-        <id>https://xiaotang1122.github.io/post/shi-yong-javascript-shi-xian-shi-jian-xian-shi/</id>
-        <link href="https://xiaotang1122.github.io/post/shi-yong-javascript-shi-xian-shi-jian-xian-shi/">
+        <id>https://xiaotang1122.github.io/shi-yong-javascript-shi-xian-shi-jian-xian-shi/</id>
+        <link href="https://xiaotang1122.github.io/shi-yong-javascript-shi-xian-shi-jian-xian-shi/">
         </link>
         <updated>2020-05-09T11:08:43.000Z</updated>
-        <content type="html"><![CDATA[<pre><code class="language-javascript">function today(){
-	//Date对象实例化
-	var time = new Date();
-	//获取年月日周
-	
-	var y = time.getFullYear(),				//年份
-		m = time.getMonth() + 1,			//月份
-		day = time.getDate(),				//当前月份的第几天
-		week =toWeek(time.getDay());		//当前月份的星期几
-		//获取时分秒
-	var  h = time.getHours(),                 //时
-		min = checkTime(time.getMinutes()),  //分
-		s = checkTime(time.getSeconds()),	//秒
-		ss  = time.getMilliseconds();		//毫秒
-	return  `${y}年${m}月${day}日 ${week} ${h}:${min}:${s}:${ss}`;
-}
-
-function toWeek(week){
-	let res ='';
-	switch(week){
-		case 0:
-			res = '日'
-			break;
-		case 1:
-			res = '一'
-			break;
-		case 2:
-			res = '二'
-			break;
-		case 3:
-			res = '三'
-			break;
-		case 4:
-			res = '四'
-			break;
-		case 5:
-			res = '五'
-			break;
-		case 6:
-			res = '六'	
-			break;
-	}
-	return '星期' + res;
-}
-	//小于10前面加0
-function checkTime(i){
-	if(i&lt;10){
-		i='0'+i
-	}
-	return i
-}
-setInterval(function(){
-	console.log(today())
-},1000)
-</code></pre>
-]]></content>
     </entry>
 </feed>
