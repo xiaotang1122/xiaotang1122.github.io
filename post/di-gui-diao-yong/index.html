@@ -1,10 +1,11 @@
 
+<!DOCTYPE html>
 <html>
   <head>
     
 <meta charset="utf-8" >
 
-<title>Letter</title>
+<title>☺递归调用 | Letter</title>
 <meta name="description" content="Pursuit stems from love">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -65,84 +66,59 @@
 
 
       <div class="content-container">
-        
-        
-<section class="post-item">
-    <div class="content">
-      <a href="https://xiaotang1122.github.io/post/di-gui-diao-yong/">
-        <h2 class="post-title">☺递归调用</h2>
-      </a>
-      <div class="post-abstract">
-        
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2020-05-11</span>
-        
-      </div>
-    </div>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://xiaotang1122.github.io/post/shu-zu-de-fang-fa/">
-        <h2 class="post-title">🍈数组的方法</h2>
-      </a>
-      <div class="post-abstract">
-        
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2020-05-09</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
+        <div class="post-detail">
+          
+          <h2 class="post-title">☺递归调用</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-05-11</span>
             
-              <a href="https://xiaotang1122.github.io/tag/uXphLJGU8/">
-                JavaScript
-                
-              </a>
-            
-          </span>
+          </div>
+          <div class="post-content">
+            <p>递归指函数内部调用自身的方式。<br>
+主要用于数量不确定的循环操作<br>
+要有退出时机否则会陷入死循环<br>
+<strong>下面通过阶乘来体验递归调用</strong></p>
+<pre><code class="language-JavaScript">function factorial(num = 3) {
+	return num == 1 ? num : num * factorial(--num);
+}
+console.log(factorial(5)); //120
+</code></pre>
+<p><strong>累加计算方法</strong></p>
+<pre><code class="language-JavaScript">function sum(...num) {
+	return num.length == 0 ? 0 : num.pop() + sum(...num);
+}
+console.log(sum(1, 2, 3, 4, 5, 7, 9)); //31
+</code></pre>
+<p><strong>递归打印倒三角</strong></p>
+<pre><code class="language-JavaScript">******
+*****
+****
+***
+**
+*
+
+function star(row = 5) {
+  if (row == 0) return &quot;&quot;;
+  document.write(&quot;*&quot;.repeat(row) + &quot;&lt;br/&gt;&quot;);
+  star(--row);
+}
+</code></pre>
+
+          </div>
+        </div>
+
         
+          <div class="next-post">
+            <a class="purple-link" href="https://xiaotang1122.github.io/post/shu-zu-de-fang-fa/">
+              <h3 class="post-title">
+                下一篇：🍈数组的方法
+              </h3>
+            </a>
+          </div>
+          
       </div>
-    </div>
-    
-  </section>
 
-<section class="post-item">
-    <div class="content">
-      <a href="https://xiaotang1122.github.io/post/shi-yong-javascript-shi-xian-shi-jian-xian-shi/">
-        <h2 class="post-title">🍋使用JavaScript实现时间显示</h2>
-      </a>
-      <div class="post-abstract">
-        
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2020-05-09</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://xiaotang1122.github.io/tag/uXphLJGU8/">
-                JavaScript
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-  </section>
-
-
-<div class="pagination-container">
-  
-  
-</div>
-
-
-      </div>
+      
 
       <div class="site-footer">
   <div class="slogan">Pursuit stems from love</div>
